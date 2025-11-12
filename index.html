@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Room homepage</title>
+  
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./script.js"></script>
+  
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+
+<body data-overflow="visible">
+  <header class="[ c-pos-absolute ] [ b-header ]">
+    <img class="[ c-pos-absolute ] [ b-header__logo ]" src="./images/logo.svg" alt="room logo" />
+    <button id="nav-btn" class="[ c-pos-absolute ] [ u-bg-transparent u-dp-none-mq ] [ b-header__btn ]" type="button" aria-expanded="false" aria-label="menu">
+      <img src="./images/icon-hamburger.svg" alt="" />
+    </button>
+    <nav id="nav-menu" class="[ c-pos-absolute ] [ u-bg-white u-bg-transparent-mq ] [ b-header__nav ]" data-state="collapsed" data-animation="none">
+      <ul class="[ c-pos-absolute ] [ c-flex-row c-gap-1 c-gap-1-mq ] [ u-fw-high u-text-lower u-list-style-none ]">
+        <li><a class="[ u-text-deco-none u-cursor-pointer u-clr-black u-clr-white-mq ]" href="#">Home</a></li>
+        <li><a class="[ u-text-deco-none u-cursor-pointer u-clr-black u-clr-white-mq ]" href="#">Shop</a></li>
+        <li><a class="[ u-text-deco-none u-cursor-pointer u-clr-black u-clr-white-mq ]" href="#about">About</a></li>
+        <li><a class="[ u-text-deco-none u-cursor-pointer u-clr-black u-clr-white-mq ]" href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <div role="presentation" id="dark-bg" class="[ c-pos-absolute ] [ u-bg-black ] [ b-dark__bg ]" data-state="hidden" data-animation="none"></div>
+  
+  <main>
+    <article class="[ c-flex-row-mq ]">
+      <header class="[ c-pos-relative ] [ u-width-1 u-width-60prc-mq ] [ b-hero ]" aria-label="image carousal">
+        <div role="presentation" class="[ c-pos-relative ] [ u-overflow-hide ]">
+          <picture id="main-img">
+            <source srcset="./images/desktop-image-hero-1.jpg" media="(min-width: 41rem)" />
+            <img class="[ u-width-1 u-vertical-align-sub ] [ b-hero__main-img ]" src="./images/mobile-image-hero-1.jpg" alt="image 1" data-animation="none"/>
+          </picture>
+          <picture id="next-img">
+            <source srcset="./images/desktop-image-hero-2.jpg" media="(min-width: 41rem)" />
+            <img class="[ c-pos-absolute ] [ u-width-1 u-vertical-align-sub ] [ b-hero__next-img ]" src="./images/mobile-image-hero-2.jpg" alt="" data-animation="none"/>
+          </picture>
+          <picture id="prev-img">
+            <source srcset="./images/desktop-image-hero-3.jpg" media="(min-width: 41rem)" />
+            <img class="[ c-pos-absolute ] [ u-width-1 u-vertical-align-sub ] [ b-hero__prev-img ]" src="./images/mobile-image-hero-3.jpg" alt="" data-animation="none"/>
+          </picture>
+        </div>
+        
+        <div role="presentation" class="[ c-pos-absolute c-flex-row ] [ b-hero__btn ]">
+          <button id="prev-btn" class="[ u-cursor-pointer u-bg-black u-bg-grey-hover ]" type="button" aria-label="previous">
+            <img src="./images/icon-angle-left.svg" alt="" />
+          </button>
+          <button id="next-btn" class="[ u-cursor-pointer u-bg-black u-bg-grey-hover ]" type="button" aria-label="next">
+            <img src="./images/icon-angle-right.svg" alt="" />
+          </button>
+        </div>
+      </header>
+      
+      <section id="hero-section" class="[ c-flex-col-mq c-align-itms-center-mq c-gap-3-mq ] [ u-pd-inline-1 u-pd-block-1 u-width-40prc-mq u-pd-inline-mq-1 u-pd-block-zero-mq ] [ b-hero__section ]" data-animation="none">
+        <h1 id="image-title">Discover innovative ways to decorate</h1>
+        <p id="image-description" class="[ u-mr-block-st-2 u-fw-low u-line-height-1 u-mr-zero-mq u-line-height-mq ]">We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love.</p>
+        <a class="[ u-width-fit u-text-deco-none u-cursor-pointer ]" href="#">
+          <button class="[ c-flex-row c-align-itms-center c-gap-2 ] [ u-mr-block-st-1 u-fs-1 u-fw-high u-letter-space-1 u-text-upper u-cursor-pointer u-clr-black u-bg-transparent u-clr-grey-hover u-mr-zero-mq u-fs-1-mq ] [ b-btn ]" type="button">
+            Shop now
+            <svg width="40" height="12" xmlns="http://www.w3.org/2000/svg"><path class="[ u-stroke-width u-stroke-grey-hover ]" d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z" stroke="#000" fill="#000" fill-rule="nonzero"/></svg>
+          </button>
+        </a>
+      </section>
+    </article>
+    
+    <article class="[ c-flex-row-mq ] [ u-width-1 ]">
+      <header class="[ u-width-29-prc-mq ]">
+        <img class="[ u-width-1 ]" src="./images/image-about-dark.jpg" alt="dark furniture" />
+      </header>
+      
+      <section id="about" class="[ c-flex-col c-gap-2 c-align-itms-center-mq c-gap-4-mq ] [ u-pd-inline-1 u-pd-block-2 u-width-40prc-mq u-pd-inline-mq-2 u-pd-block-zero-mq ]">
+        <h2>About our furniture</h2>
+        <p class="[ u-line-height-1 u-line-height-mq ]">Our multifunctional collection blends design and function to suit your individual taste. Make each room unique, or pick a cohesive theme that best express your interests and what inspires you. Find the furniture pieces you need, from traditional to contemporary styles or anything in between. Product specialists are available to help you create your dream space.</p>
+      </section>
+      
+      <footer class="[ u-width-31-prc-mq ]">
+        <img class="[ u-width-1 ]" src="./images/image-about-light.jpg" alt="light furniture" />
+      </footer>
+    </article>
+    
+  </main>
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">ROKUROO7</a>.
+  </footer>
+</body>
+</html>
