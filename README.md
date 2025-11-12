@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/room-homepage-with-animations-PJSww0N_T-](https://www.frontendmentor.io/solutions/room-homepage-with-animations-PJSww0N_T-)
+- Live Site URL: [https://rokuroo7.github.io/room-homepage/](https://rokuroo7.github.io/room-homepage/)
 
 ## My process
 
