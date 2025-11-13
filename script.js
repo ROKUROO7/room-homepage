@@ -71,10 +71,10 @@ const populateDOM = async () => {
     const getJson = await fetch("./text.json")
     const data = await getJson.json()
     
-    let desktopImgsSrc = []
-    let mobileImgsSrc = []
-    let titles = []
-    let descriptions = []
+    const desktopImgsSrc = []
+    const mobileImgsSrc = []
+    const titles = []
+    const descriptions = []
     
     for (let i = 0; i < Object.keys(data).length; i++) {
       desktopImgsSrc.push(data[i].image.desktop)
@@ -98,6 +98,7 @@ const populateDOM = async () => {
       heroSection.dataset.animation = "fade-in-reverse"
       
       nextBtn.disabled = true
+      prevBtn.disabled = true
     }
     
     nextBtn.addEventListener("click", nextSlide)
@@ -113,6 +114,7 @@ const populateDOM = async () => {
       
       heroSection.dataset.animation = "fade-in-reverse"
       
+      nextBtn.disabled = true
       prevBtn.disabled = true
     }
     
